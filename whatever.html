@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Citadels Portal</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background for a security/tech feel */
+        }
+        .container-card {
+            background-color: #161b22; /* Slightly lighter card background */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+        /* Style for the accent color */
+        .accent-text {
+            color: #00e0ff; /* Bright cyan/teal */
+        }
+        .accent-bg {
+            background-color: #00e0ff;
+        }
+        .accent-border {
+            border-color: #00e0ff;
+        }
+        .panel {
+            min-height: 60vh;
+        }
+        .nav-button.active {
+            border-bottom: 3px solid #00e0ff;
+            color: #00e0ff;
+        }
+        .section-header {
+            border-bottom: 1px solid #2f363d;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl font-extrabold mb-2 accent-text">
+                Cyber Citadels
+            </h1>
+            <p class="text-gray-400 text-lg">Your Sentinel in the Digital Realm</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="flex justify-center border-b border-gray-700 mb-8 container-card rounded-xl p-2 sticky top-0 z-10">
+            <button class="nav-button p-4 text-gray-400 font-semibold hover:text-white transition-colors active" data-panel="home">Home</button>
+            <button class="nav-button p-4 text-gray-400 font-semibold hover:text-white transition-colors" data-panel="dashboard">Threat Dashboard</button>
+            <button class="nav-button p-4 text-gray-400 font-semibold hover:text-white transition-colors" data-panel="challenge">Challenge Panel</button>
+            <button class="nav-button p-4 text-gray-400 font-semibold hover:text-white transition-colors" data-panel="about">About</button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="space-y-8">
+            
+            <!-- 1. Home Panel (Updated with EXPANDED Cybersecurity Content) -->
+            <div id="home" class="panel container-card p-6 md:p-10 rounded-xl transition-opacity duration-500">
+                <h2 class="text-4xl font-bold mb-6 accent-text section-header pb-3">Digital Defense: The Ten Pillars of Cyber Security</h2>
+                
+                <p class="text-xl mb-8 text-gray-300">
+                    Strong defense is holistic. We've organized the essential concepts into ten pillars—from fundamental principles to advanced governance—to provide a complete security framework.
+                </p>
+
+                <!-- 1. The CIA Triad (Existing) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">1. The CIA Triad: Foundation</h3>
+                    <p class="text-gray-400 mb-4">
+                        Confidentiality, Integrity, and Availability—the three main goals of any security strategy.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-indigo-500">
+                            <h4 class="font-semibold text-lg text-indigo-400">Confidentiality</h4>
+                            <p class="text-sm text-gray-400">Restricting access to authorized parties (e.g., Encryption).</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-yellow-500">
+                            <h4 class="font-semibold text-lg text-yellow-400">Integrity</h4>
+                            <p class="text-sm text-gray-400">Ensuring data accuracy and preventing unauthorized changes (e.g., Hashing).</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-red-500">
+                            <h4 class="font-semibold text-lg text-red-500">Availability</h4>
+                            <p class="text-sm text-gray-400">Guaranteed access to systems and data when needed (e.g., Redundancy).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Immediate Defense Checklist (Existing) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-green-400">2. Immediate Defense Checklist</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>**Multi-Factor Authentication (MFA):** Essential secondary barrier against credential theft.</li>
+                        <li>**Regular Patching:** Close known security vulnerabilities immediately.</li>
+                        <li>**Phishing Awareness:** Always verify and be skeptical of urgent or unsolicited communication.</li>
+                    </ul>
+                </div>
+                
+                <!-- 3. Threat Landscape (Existing) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">3. The Threat Landscape</h3>
+                    <p class="text-gray-400 mb-4">
+                        Understanding the two primary categories of threats.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-pink-500">
+                            <h4 class="font-semibold text-base text-pink-400">Code-Based Threats (Malware)</h4>
+                            <p class="mt-1">Ransomware, Trojan Horses, Spyware.</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-semibold text-base text-orange-400">Human-Based Threats (Social Engineering)</h4>
+                            <p class="mt-1">Phishing (email), Vishing (voice), Pretexting, and Baiting.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Architectural Defense (Existing) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">4. Architectural Defense Principles</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>**Zero Trust:** Never trust any entity, inside or outside the perimeter; always verify access.</li>
+                        <li>**Least Privilege (PoLP):** Grant users only the minimum access necessary to perform tasks.</li>
+                        <li>**Network Segmentation:** Divide the network to contain breaches and prevent lateral movement.</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Data Resilience (Existing) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">5. Data Resilience and Backup</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>**3-2-1 Rule:** 3 copies of data, 2 different storage types, 1 copy offsite/air-gapped.</li>
+                        <li>**Data Classification:** Categorize data sensitivity (Public, Confidential) to apply correct protection.</li>
+                        <li>**Strong Encryption:** Use AES-256 (at rest) and TLS 1.3 (in transit).</li>
+                    </ul>
+                </div>
+
+                
+                <!-- 6. NEW: Web Attack Fundamentals (OWASP) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">6. Web Application Attack Fundamentals</h3>
+                    <p class="text-gray-400 mb-4">
+                        The OWASP Top 10 lists the most critical web application security risks. We focus on the high-impact threats:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-lg text-red-400">Injection Flaws (SQL, Command)</h4>
+                            <p class="text-sm text-gray-400">Attacker submits unauthorized data as a query command. **Defense:** Use **parameterized queries** (prepared statements) to separate data from commands.</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-lg text-red-400">Cross-Site Scripting (XSS)</h4>
+                            <p class="text-sm text-gray-400">Injecting malicious client-side scripts into a website to execute in a victim's browser. **Defense:** **Input validation and sanitization** of all user input, and context-aware output encoding.</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-lg text-red-400">Broken Authentication</h4>
+                            <p class="text-sm text-gray-400">Flaws that allow attackers to compromise passwords, keys, or session tokens. **Defense:** Use **MFA** and securely manage session IDs (set secure, HTTPOnly flags).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. NEW: Networking Protocols for Security -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">7. Critical Networking Protocols</h3>
+                    <p class="text-gray-400 mb-4">
+                        Security relies on hardening the communication channels and layers.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>**IPSec (Internet Protocol Security):** A protocol suite used to secure IP communication by authenticating and encrypting each IP packet, often used for **VPNs**.</li>
+                        <li>**DNSSEC (Domain Name System Security Extensions):** Adds a layer of digital signatures to DNS to ensure users are connecting to the intended server, mitigating **DNS spoofing**.</li>
+                        <li>**TLS/SSL:** Provides communication security over the network (Layer 6/7) to ensure data confidentiality and integrity for **HTTPS traffic**.</li>
+                        <li>**Firewall Rules (ACLs):** Access Control Lists operate at the Network Layer (L3) to determine which traffic is permitted based on IP address and port number.</li>
+                    </ul>
+                </div>
+
+                <!-- 8. NEW: Cryptography and its Use Cases -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">8. Cryptography: Ciphers and Keys</h3>
+                    <p class="text-gray-400 mb-4">
+                        The science of securing communication via codes, split into three functional areas:
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-purple-500">
+                            <h4 class="font-semibold text-lg text-purple-400">Symmetric Key</h4>
+                            <p class="text-sm text-gray-400">Uses the **same key** for encryption and decryption (e.g., **AES**). Fast, but key sharing is a challenge.</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-purple-500">
+                            <h4 class="font-semibold text-lg text-purple-400">Asymmetric Key</h4>
+                            <p class="text-sm text-gray-400">Uses a **Public Key** to encrypt and a **Private Key** to decrypt (e.g., **RSA**). Slower, but solves key sharing and enables digital signatures.</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-t-4 border-purple-500">
+                            <h4 class="font-semibold text-lg text-purple-400">Hashing (One-Way)</h4>
+                            <p class="text-sm text-gray-400">Creates a unique, fixed-size output (digest) from data. Used to verify **integrity** and store **passwords** securely (e.g., SHA-256).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. NEW: Identity and Access Management (IAM) -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-indigo-400">9. Identity and Access Management (IAM)</h3>
+                    <p class="text-gray-400 mb-4">
+                        The framework that governs who has access to what, and under which conditions.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-lg text-indigo-400">Authentication (Who)</h4>
+                            <p class="text-sm text-gray-400">Verifying the claimed identity (Password, Token, Biometrics, MFA).</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-lg text-indigo-400">Authorization (What)</h4>
+                            <p class="text-sm text-gray-400">Determining what an authenticated user is allowed to do (Permissions, Roles, PoLP).</p>
+                        </div>
+                        <div class="bg-[#1f2937] p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-lg text-indigo-400">Accounting (When)</h4>
+                            <p class="text-sm text-gray-400">Tracking user actions and resource usage (Audit logs, activity monitoring).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. NEW: Cyber Laws and Governance -->
+                <div class="mb-10 pt-4 border-t border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-emerald-400">10. Cyber Laws and Internal Policies</h3>
+                    <p class="text-gray-400 mb-4">
+                        Security must align with legal, regulatory, and internal organizational requirements (Governance, Risk, and Compliance - GRC).
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
+                        <li>**Global Regulations (GDPR):** Requires strict protection and specific rights for personal data of EU residents (Right to be Forgotten, breach notification).</li>
+                        <li>**Sector-Specific Laws (HIPAA):** Mandates security and privacy for sensitive patient health information (PHI) in the US healthcare sector.</li>
+                        <li>**Internal Acceptable Use Policy (AUP):** Defines how users may use company IT assets and resources, reducing internal risk.</li>
+                        <li>**Risk Management:** The ongoing process of identifying, assessing, and treating threats to organizational assets.</li>
+                    </ul>
+                </div>
+
+
+                <!-- Call to Action -->
+                <div class="text-center p-6 bg-gray-800 rounded-lg">
+                    <p class="text-xl font-semibold mb-3">Ready to test your knowledge?</p>
+                    <button onclick="document.querySelector('.nav-button[data-panel=\'challenge\']').click()" class="accent-bg hover:opacity-90 text-black font-bold py-2 px-6 rounded-full transition duration-300">
+                        Take the Challenge Quiz
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- 2. Dashboard Panel (Initially hidden) -->
+            <div id="dashboard" class="panel container-card p-6 md:p-10 rounded-xl hidden transition-opacity duration-500">
+                <h2 class="text-4xl font-bold mb-6 accent-text border-b pb-3 border-gray-700">Threat Monitoring Dashboard</h2>
+                
+                <!-- Status Metrics -->
+                <div class="grid sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-[#1f2937] p-6 rounded-lg text-center">
+                        <p class="text-sm uppercase text-gray-400">System Status</p>
+                        <p id="status-text" class="text-3xl font-bold text-green-500 mt-1">SECURE</p>
+                    </div>
+                    <div class="bg-[#1f2937] p-6 rounded-lg text-center">
+                        <p class="text-sm uppercase text-gray-400">Critical Breaches</p>
+                        <p id="critical-count" class="text-3xl font-bold text-red-500 mt-1">0</p>
+                    </div>
+                    <div class="bg-[#1f2937] p-6 rounded-lg text-center">
+                        <p class="text-sm uppercase text-gray-400">Security Warnings</p>
+                        <p id="warning-count" class="text-3xl font-bold text-yellow-500 mt-1">2</p>
+                    </div>
+                </div>
+
+                <!-- Action/Scan Area -->
+                <div class="text-center p-8 border-2 border-dashed accent-border rounded-xl mb-8">
+                    <p class="text-2xl font-semibold mb-4">Run a System Integrity Check</p>
+                    <button id="scan-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg shadow-indigo-500/50">
+                        Initiate Scan
+                    </button>
+                    <p id="scan-message" class="mt-4 text-gray-400"></p>
+                </div>
+
+                <!-- Recent Activity Log (Mock Data) -->
+                <h3 class="text-2xl font-semibold mb-4 text-gray-300">Recent Security Activity</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="p-3 bg-[#1f2937] rounded-md flex justify-between items-center">
+                        <span class="text-yellow-400">[WARNING]</span> Suspicious login attempt from unauthorized IP blocked.
+                        <span class="text-xs text-gray-500">1 min ago</span>
+                    </li>
+                    <li class="p-3 bg-[#1f2937] rounded-md flex justify-between items-center">
+                        <span class="text-green-400">[INFO]</span> Routine firewall check completed successfully.
+                        <span class="text-xs text-gray-500">45 min ago</span>
+                    </li>
+                    <li class="p-3 bg-[#1f2937] rounded-md flex justify-between items-center">
+                        <span class="text-yellow-400">[WARNING]</span> Outdated library detected in front-end dependencies.
+                        <span class="text-xs text-gray-500">2 hours ago</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 3. Challenge Panel (Quiz) (Initially hidden) -->
+            <div id="challenge" class="panel container-card p-6 md:p-10 rounded-xl hidden transition-opacity duration-500">
+                <h2 class="text-4xl font-bold mb-6 accent-text border-b pb-3 border-gray-700">Cybersecurity Challenge Quiz</h2>
+                <p class="text-gray-400 mb-6">Test your knowledge and prove you're a true Citadel defender!</p>
+
+                <div id="quiz-container">
+                    <!-- Quiz content will be injected here by JavaScript -->
+                    <div class="flex justify-center items-center h-48">
+                        <button id="start-quiz-button" class="accent-bg hover:opacity-90 text-black font-bold py-3 px-10 rounded-lg transition duration-300 text-xl">
+                            Start Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4. About Panel (Initially hidden) -->
+            <div id="about" class="panel container-card p-6 md:p-10 rounded-xl hidden transition-opacity duration-500">
+                <h2 class="text-4xl font-bold mb-6 accent-text border-b pb-3 border-gray-700">About Cyber Citadels</h2>
+                
+                <div class="space-y-6 text-gray-300">
+                    <h3 class="text-2xl font-semibold text-gray-200">Our Vision</h3>
+                    <p>
+                        We envision a world where digital infrastructure is inherently secure. Cyber Citadels was founded on the principle that the best defense is built through **knowledge, technology, and community**. We aim to be the leading source for robust security solutions and public cyber education.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-200">Core Services</h3>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>**Advanced Threat Intelligence:** Real-time data feeds and analysis of emerging global threats.</li>
+                        <li>**System Hardening Consultations:** Expert guidance on securing complex enterprise and personal systems.</li>
+                        <li>**Educational Programs:** Interactive quizzes, training modules, and public awareness campaigns.</li>
+                        <li>**Vulnerability Audits:** Comprehensive testing to identify and mitigate security weaknesses.</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-200">Our Promise</h3>
+                    <p class="italic text-yellow-400">
+                        "In the ever-changing digital battlefield, we are the constant. We don't just protect; we empower."
+                    </p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-500 border-t border-gray-800 pt-6">
+            &copy; 2025 Cyber Citadels. All Rights Reserved. For educational and demonstrative purposes only.
+        </footer>
+    </div>
+
+    <script>
+        // --- Single Page Application (SPA) Navigation Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const panels = document.querySelectorAll('.panel');
+            const navButtons = document.querySelectorAll('.nav-button');
+
+            const showPanel = (panelId) => {
+                // 1. Hide all panels
+                panels.forEach(panel => {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('opacity-100');
+                    panel.classList.add('opacity-0');
+                });
+
+                // 2. Remove active class from all buttons
+                navButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+
+                // 3. Show the requested panel and set active button
+                const targetPanel = document.getElementById(panelId);
+                const targetButton = document.querySelector(`.nav-button[data-panel="${panelId}"]`);
+                
+                if (targetPanel) {
+                    targetPanel.classList.remove('hidden');
+                    // Add a slight delay to allow the browser to register the 'show' state before starting the opacity transition
+                    setTimeout(() => {
+                        targetPanel.classList.remove('opacity-0');
+                        targetPanel.classList.add('opacity-100');
+                    }, 50);
+                }
+                if (targetButton) {
+                    targetButton.classList.add('active');
+                }
+            };
+
+            // Event listener for navigation buttons
+            navButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    showPanel(e.currentTarget.dataset.panel);
+                });
+            });
+
+            // Set initial panel to home
+            showPanel('home');
+        });
+
+
+        // --- Dashboard Logic (Mock Scan) ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const scanButton = document.getElementById('scan-button');
+            const scanMessage = document.getElementById('scan-message');
+            const statusText = document.getElementById('status-text');
+            const criticalCount = document.getElementById('critical-count');
+            const warningCount = document.getElementById('warning-count');
+
+            const runScan = () => {
+                // Disable button and show loading
+                scanButton.disabled = true;
+                scanButton.textContent = 'Scanning... Please wait.';
+                scanButton.classList.remove('bg-indigo-600');
+                scanButton.classList.add('bg-gray-500');
+                scanMessage.textContent = 'Analyzing system integrity and threat vectors...';
+                
+                statusText.classList.remove('text-green-500', 'text-red-500', 'text-yellow-500');
+                statusText.classList.add('text-gray-400');
+                statusText.textContent = 'IN PROGRESS';
+
+                // Simulate a network delay for 3 seconds
+                setTimeout(() => {
+                    // 90% chance of being secure, 10% chance of a warning
+                    const isSecure = Math.random() > 0.1;
+                    
+                    if (isSecure) {
+                        statusText.textContent = 'SECURE';
+                        statusText.classList.remove('text-gray-400');
+                        statusText.classList.add('text-green-500');
+                        criticalCount.textContent = '0';
+                        warningCount.textContent = Math.floor(Math.random() * 3); // 0 to 2 warnings
+                        scanMessage.textContent = 'Scan completed. No critical breaches found. System integrity score: 98%.';
+                    } else {
+                        statusText.textContent = 'VULNERABLE';
+                        statusText.classList.remove('text-gray-400');
+                        statusText.classList.add('text-red-500');
+                        criticalCount.textContent = '1';
+                        warningCount.textContent = Math.floor(Math.random() * 2) + 1; // 1 or 2 warnings
+                        scanMessage.textContent = 'Scan completed. CRITICAL threat detected! Immediate action required.';
+                    }
+
+                    // Re-enable button
+                    scanButton.disabled = false;
+                    scanButton.textContent = 'Run System Scan';
+                    scanButton.classList.add('bg-indigo-600');
+                    scanButton.classList.remove('bg-gray-500');
+                }, 3000); 
+            };
+
+            scanButton.addEventListener('click', runScan);
+        });
+
+
+        // --- Challenge Panel (Quiz) Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizContainer = document.getElementById('quiz-container');
+            const startQuizButton = document.getElementById('start-quiz-button');
+
+            const quizQuestions = [
+                {
+                    question: "What does 'DDoS' stand for?",
+                    options: ["Digital Defense Operation System", "Distributed Denial of Service", "Data Domain Object Storage", "Direct Digital Operating System"],
+                    answerIndex: 1
+                },
+                {
+                    question: "Which term describes an attempt to acquire sensitive information (like usernames, passwords) by disguising as a trustworthy entity?",
+                    options: ["Spoofing", "Phishing", "Man-in-the-Middle", "Trojan"],
+                    answerIndex: 1
+                },
+                {
+                    question: "What is a 'zero-day' vulnerability?",
+                    options: ["A bug that has existed for less than 24 hours.", "A vulnerability known to developers but not attackers.", "A vulnerability that is unknown to the vendor and has no patch available.", "A bug found during system boot-up."],
+                    answerIndex: 2
+                },
+                {
+                    question: "What security protocol is used to encrypt communication on the web (look for 's' in HTTPS)?",
+                    options: ["FTP", "SMTP", "TLS/SSL", "UDP"],
+                    answerIndex: 2
+                },
+                {
+                    question: "In cryptography, what is the primary purpose of a 'hash function'?",
+                    options: ["To encrypt and decrypt data.", "To create a unique, fixed-size string from an input of any size.", "To generate random numbers.", "To authenticate a user's identity across multiple systems."],
+                    answerIndex: 1
+                }
+            ];
+
+            let currentQuestionIndex = 0;
+            let score = 0;
+
+            const renderQuestion = () => {
+                const q = quizQuestions[currentQuestionIndex];
+                
+                if (!q) {
+                    showQuizResult();
+                    return;
+                }
+
+                const questionHTML = `
+                    <div class="p-6 md:p-8 bg-[#1f2937] rounded-xl shadow-2xl space-y-6">
+                        <p class="text-2xl font-semibold accent-text mb-4">Question ${currentQuestionIndex + 1} of ${quizQuestions.length}</p>
+                        <p class="text-xl text-gray-200">${q.question}</p>
+                        <div id="options-container" class="space-y-3">
+                            ${q.options.map((option, index) => `
+                                <button data-index="${index}" class="option-button w-full text-left py-3 px-4 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-150 border-2 border-transparent">
+                                    ${String.fromCharCode(65 + index)}. ${option}
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div id="feedback-message" class="text-lg font-medium h-6"></div>
+                        <button id="next-button" class="accent-bg text-black font-bold py-2 px-6 rounded-lg transition duration-300 hidden float-right">
+                            Next Question
+                        </button>
+                    </div>
+                `;
+                
+                quizContainer.innerHTML = questionHTML;
+                
+                // Attach event listeners to new option buttons
+                document.querySelectorAll('.option-button').forEach(button => {
+                    button.addEventListener('click', checkAnswer);
+                });
+
+                document.getElementById('next-button').addEventListener('click', () => {
+                    currentQuestionIndex++;
+                    renderQuestion();
+                });
+            };
+
+            const checkAnswer = (event) => {
+                const selectedIndex = parseInt(event.currentTarget.dataset.index);
+                const correctIndex = quizQuestions[currentQuestionIndex].answerIndex;
+                const feedback = document.getElementById('feedback-message');
+                const nextButton = document.getElementById('next-button');
+
+                // Disable all options
+                document.querySelectorAll('.option-button').forEach(button => {
+                    button.disabled = true;
+                    button.classList.remove('hover:bg-gray-600');
+                    if (parseInt(button.dataset.index) === correctIndex) {
+                        // Highlight correct answer
+                        button.classList.add('bg-green-700', 'border-green-400');
+                    } else if (parseInt(button.dataset.index) === selectedIndex) {
+                        // Highlight incorrect selected answer
+                        button.classList.add('bg-red-700', 'border-red-400');
+                    }
+                });
+
+                if (selectedIndex === correctIndex) {
+                    score++;
+                    feedback.innerHTML = '<span class="text-green-400">Correct!</span> Well done, defender.';
+                } else {
+                    feedback.innerHTML = '<span class="text-red-400">Incorrect.</span> The correct answer is highlighted.';
+                }
+
+                nextButton.classList.remove('hidden');
+            };
+
+            const showQuizResult = () => {
+                let resultMessage = '';
+                let resultColor = '';
+                const percentage = (score / quizQuestions.length) * 100;
+
+                if (percentage === 100) {
+                    resultMessage = "Cyber Sentinel! Perfect score. Your knowledge is a bastion of defense.";
+                    resultColor = 'text-green-400';
+                } else if (percentage >= 60) {
+                    resultMessage = "Cyber Defender! Great job. A solid understanding of core security concepts.";
+                    resultColor = 'text-yellow-400';
+                } else {
+                    resultMessage = "Digital Cadet. Keep learning! Review the basics and try again to build your defenses.";
+                    resultColor = 'text-red-400';
+                }
+
+                quizContainer.innerHTML = `
+                    <div class="text-center p-8 bg-[#1f2937] rounded-xl shadow-2xl space-y-6">
+                        <p class="text-3xl font-bold accent-text">Quiz Complete!</p>
+                        <p class="text-6xl font-extrabold ${resultColor}">${score} / ${quizQuestions.length}</p>
+                        <p class="text-2xl ${resultColor}">${resultMessage}</p>
+                        <button id="restart-quiz-button" class="accent-bg hover:opacity-90 text-black font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
+                            Restart Challenge
+                        </button>
+                    </div>
+                `;
+
+                document.getElementById('restart-quiz-button').addEventListener('click', () => {
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    renderQuestion();
+                });
+            };
+
+            startQuizButton.addEventListener('click', () => {
+                startQuizButton.classList.add('hidden');
+                renderQuestion();
+            });
+
+        });
+    </script>
+</body>
+</html>
